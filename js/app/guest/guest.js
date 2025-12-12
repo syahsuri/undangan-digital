@@ -160,21 +160,26 @@ export const guest = (() => {
     const open = (button) => {
         button.disabled = true;
         document.body.scrollIntoView({ behavior: 'instant' });
+        
+        // Show the root content
         document.getElementById('root').classList.remove('opacity-0');
-
+        
         if (theme.isAutoMode()) {
             document.getElementById('button-theme').classList.remove('d-none');
         }
-
+    
         slide();
         theme.spyTop();
-
+    
         confetti.basicAnimation();
         util.timeOut(confetti.openAnimation, 1500);
-
+    
         document.dispatchEvent(new Event('undangan.open'));
+        
+        // Remove welcome screen with fade out
         util.changeOpacity(document.getElementById('welcome'), false).then((el) => el.remove());
     };
+    
 
     /**
      * @param {HTMLImageElement} img
@@ -255,10 +260,10 @@ export const guest = (() => {
         const url = new URL('https://calendar.google.com/calendar/render');
         const data = new URLSearchParams({
             action: 'TEMPLATE',
-            text: 'The Wedding of Wahyu and Riski',
-            dates: `${formatDate('2023-03-15 10:00')}/${formatDate('2023-03-15 11:00')}`,
+            text: 'The Wedding of Helma Putri & Deni mohammad nur ',
+            dates: `${formatDate('2026-01-18 10:00')}/${formatDate('2026-01-18 12:30')}`,
             details: 'Tanpa mengurangi rasa hormat, kami mengundang Anda untuk berkenan menghadiri acara pernikahan kami. Terima kasih atas perhatian dan doa restu Anda, yang menjadi kebahagiaan serta kehormatan besar bagi kami.',
-            location: 'RT 10 RW 02, Desa Pajerukan, Kec. Kalibagor, Kab. Banyumas, Jawa Tengah 53191.',
+            location: "Masjid Ta'abbud Matang Teungoh, Kec. Tanah Luas, Kabupaten Aceh Utara, Aceh",
             ctz: config.get('tz'),
         });
 
@@ -297,22 +302,24 @@ export const guest = (() => {
         modalImageClick();
         normalizeArabicFont();
         buildGoogleCalendar();
-
+    
         if (information.has('presence')) {
             document.getElementById('form-presence').value = information.get('presence') ? '1' : '2';
         }
-
+    
         if (information.get('info')) {
             document.getElementById('information')?.remove();
         }
-
-        // wait until welcome screen is show.
-        await util.changeOpacity(document.getElementById('welcome'), true);
-
-        // remove loading screen and show welcome screen.
-        await util.changeOpacity(document.getElementById('loading'), false).then((el) => el.remove());
+    
+        // Welcome screen is already visible (no need to fade in)
+        // Just ensure it's shown
+        const welcomeEl = document.getElementById('welcome');
+        if (welcomeEl && welcomeEl.style.opacity === '0') {
+            await util.changeOpacity(welcomeEl, true);
+        }
+    
+        // No loading screen to remove since we deleted it
     };
-
     /**
      * @returns {void}
      */
@@ -321,64 +328,70 @@ export const guest = (() => {
         offline.init();
         comment.init();
         progress.init();
-
+    
         config = storage('config');
         information = storage('information');
-
+    
         const vid = video.init();
         const img = image.init();
         const aud = audio.init();
         const lib = loaderLibs();
         const token = document.body.getAttribute('data-key');
         const params = new URLSearchParams(window.location.search);
-
+    
         window.addEventListener('resize', util.debounce(slide));
-        document.addEventListener('undangan.progress.done', () => booting());
+        
+        // Remove or modify this line - no need to wait for progress
+        // document.addEventListener('undangan.progress.done', () => booting());
+        // Call booting immediately instead:
+        booting();
+        
         document.addEventListener('hide.bs.modal', () => document.activeElement?.blur());
         document.getElementById('button-modal-download').addEventListener('click', (e) => {
             img.download(e.currentTarget.getAttribute('data-src'));
         });
-
+    
         if (!token || token.length <= 0) {
             document.getElementById('comment')?.remove();
             document.querySelector('a.nav-link[href="#comment"]')?.closest('li.nav-item')?.remove();
-
+    
             vid.load();
             img.load();
             aud.load();
             lib.load({ confetti: document.body.getAttribute('data-confetti') === 'true' });
         }
-
+    
         if (token && token.length > 0) {
             // add 2 progress for config and comment.
             // before img.load();
             progress.add();
             progress.add();
-
+    
             // if don't have data-src.
             if (!img.hasDataSrc()) {
                 img.load();
             }
-
+    
             session.guest(params.get('k') ?? token).then(({ data }) => {
                 document.dispatchEvent(new Event('undangan.session'));
                 progress.complete('config');
-
+    
                 if (img.hasDataSrc()) {
                     img.load();
                 }
-
+    
                 vid.load();
                 aud.load();
                 lib.load({ confetti: data.is_confetti_animation });
-
+    
                 comment.show()
                     .then(() => progress.complete('comment'))
                     .catch(() => progress.invalid('comment'));
-
+    
             }).catch(() => progress.invalid('config'));
         }
     };
+    
 
     /**
      * @returns {object}

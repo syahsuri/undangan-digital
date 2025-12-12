@@ -82,6 +82,11 @@ html[data-bs-theme="dark"] .btn-outline-auto {
     --bs-gradient: none;
 }
 
+.img-center-crop {
+    object-fit: cover;
+    object-position: center 10%; /* move image down */
+}
+
 /* MAGENTA/PINK THEME - Outline Buttons Light Mode */
 html[data-bs-theme="light"] .btn-outline-auto {
     --bs-btn-color: #FF1493;
@@ -122,3 +127,23 @@ html[data-bs-theme="light"] .bg-overlay-auto {
 .gif-image {
     max-height: 10rem;
 }
+
+/* Background cover image styling */
+.bg-cover-home {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#welcome .bg-cover-home {
+    opacity: 0.7 !important; /* Adjust this value */
+}
+
+html[data-bs-theme="light"] .position-absolute.bg-cover-home {
+    opacity: 1 !important; /* Full visibility - no transparency */
+}
+/* Override opacity classes for better visibility */
+html[data-bs-theme="dark"] .position-absolute.bg-cover-home {
+    opacity: 1 !important; /* Full visibility - no transparency */
+}
+
