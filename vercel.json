@@ -1,6 +1,7 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
-    ]
-  }
-  
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/generate-link", "destination": "/generate-link.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
