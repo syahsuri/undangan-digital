@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Generate Link Undangan — Helma &amp; Deni</title>
+    <title>Generate Link Undangan — Muhibbuddin &amp; Raudhatun Nisa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Lato:wght@300;400;700&display=swap">
@@ -46,7 +46,6 @@
             position: relative;
         }
 
-        /* Corner decorations */
         .card::before, .card::after {
             content: '';
             position: absolute;
@@ -66,7 +65,6 @@
         .card-inner-corner-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
         .card-inner-corner-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
 
-        /* Header */
         .header-arabic {
             font-family: 'Lato', sans-serif;
             font-size: 1.5rem;
@@ -109,7 +107,6 @@
             opacity: 0.7;
         }
 
-        /* Base URL display */
         .base-url-label {
             font-size: 0.7rem;
             letter-spacing: 2px;
@@ -128,7 +125,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* Input */
         .input-label {
             font-size: 0.7rem;
             letter-spacing: 2px;
@@ -187,7 +183,6 @@
         }
         .input-hint i { margin-right: 4px; }
 
-        /* Result box */
         .result-section {
             display: none;
             margin-top: 1.5rem;
@@ -213,7 +208,6 @@
             word-break: break-all;
             line-height: 1.6;
             margin-bottom: 0.75rem;
-            position: relative;
         }
 
         .result-guest-highlight {
@@ -257,7 +251,6 @@
             color: #7ed4af;
         }
 
-        /* Guest list */
         .list-section {
             margin-top: 2rem;
             border-top: 1px solid rgba(201,168,76,0.15);
@@ -341,7 +334,6 @@
             letter-spacing: 1px;
         }
 
-        /* Toast */
         .toast-msg {
             position: fixed;
             bottom: 2rem;
@@ -375,11 +367,11 @@
     <div class="divider"><span>◆</span></div>
 
     <h1>Generator Link Undangan</h1>
-    <p class="subtitle">Helma Putri &amp; Deni Mohammad Nur</p>
+    <p class="subtitle">Muhibbuddin., S.Pd &amp; Raudhatun Nisa., A.Md.Kep</p>
 
     <!-- Base URL -->
     <div class="base-url-label"><i class="fa-solid fa-globe" style="margin-right:6px;"></i>Base URL Undangan</div>
-    <div class="base-url-box" id="base-url-display">https://undangan-digital-amber.vercel.app/</div>
+    <div class="base-url-box" id="base-url-display"></div>
 
     <!-- Input -->
     <label class="input-label" for="guest-input">
@@ -422,13 +414,23 @@
         </div>
     </div>
 
+    <!-- Guest List -->
+    <div class="list-section">
+        <div class="list-header">
+            <div class="list-title"><i class="fa-solid fa-list" style="margin-right:6px;"></i>Daftar Tamu Tersimpan</div>
+            <div class="list-count" id="list-count">0 tamu</div>
+        </div>
+        <div class="guest-list" id="guest-list">
+            <div class="empty-list">— Belum ada tamu tersimpan —</div>
+        </div>
+    </div>
+
 </div>
 
 <div class="toast-msg" id="toast"></div>
 
 <script>
     // ===== CONFIG =====
-    // Change this to your actual deployed URL
     const BASE_URL = 'https://undangan-muhibbudin-dan-raudhatun-nisa.vercel.app/';
     document.getElementById('base-url-display').textContent = BASE_URL;
 
@@ -444,11 +446,9 @@
             return;
         }
 
-        // Encode name for URL — use ?to= query param (works on any hosting)
         const encoded = encodeURIComponent(name);
         currentLink = BASE_URL + '?to=' + encoded;
 
-        // Display with highlight
         const box = document.getElementById('result-box');
         box.innerHTML =
             '<span style="color:rgba(253,248,239,0.4)">' + BASE_URL + '?to=</span>' +
@@ -472,7 +472,6 @@
                 btn.innerHTML = '<i class="fa-solid fa-copy"></i> Salin Link';
             }, 2000);
         }).catch(() => {
-            // Fallback
             const el = document.createElement('textarea');
             el.value = currentLink;
             document.body.appendChild(el);
@@ -487,7 +486,7 @@
     function shareWhatsApp() {
         if (!currentLink) return;
         const name = document.getElementById('guest-input').value.trim();
-        const msg = `Assalamualaikum Warahmatullahi Wabarakatuh\n\nKepada Yth.\n*${name}*\n\nDengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami:\n\n👰 *Helma Putri* & 🤵 *Deni Mohammad Nur*\n📅 Minggu, 18 Januari 2026\n📍 Masjid Ta'abbud Matang Teungoh\n\nSilakan buka undangan digital kami:\n${currentLink}\n\nMohon doa restu dan kehadiran Bapak/Ibu/Saudara/i. Aamiin. 🤲`;
+        const msg = `Assalamualaikum Warahmatullahi Wabarakatuh\n\nKepada Yth.\n*${name}*\n\nDengan penuh kebahagiaan, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami:\n\n🤵 *Muhibbuddin., S.Pd* & 👰 *Raudhatun Nisa., A.Md.Kep*\n📅 Selasa, 14 April 2026\n📍 Gampong Ranto, Meurah Mulia, Aceh Utara\n\nSilakan buka undangan digital kami:\n${currentLink}\n\nMohon doa restu dan kehadiran Bapak/Ibu/Saudara/i. Aamiin. 🤲`;
         window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
     }
 
@@ -508,11 +507,10 @@
     // ===== RENDER GUEST LIST =====
     function renderGuestList() {
         const list = document.getElementById('guest-list');
-        const empty = document.getElementById('empty-msg');
         document.getElementById('list-count').textContent = guests.length + ' tamu';
 
         if (guests.length === 0) {
-            list.innerHTML = '<div class="empty-list" id="empty-msg">— Belum ada tamu tersimpan —</div>';
+            list.innerHTML = '<div class="empty-list">— Belum ada tamu tersimpan —</div>';
             return;
         }
 
