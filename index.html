@@ -9,21 +9,16 @@
     <link rel="icon" type="image/png" href="./assets/images/favicon.svg">
     <link rel="apple-touch-icon" href="./assets/images/favicon.svg">
 
-    <!-- Preconnect CDN -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
 
-    <!-- Fonts: Amiri (Arabic-style), Cinzel (elegant serif), Lato (body) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel+Decorative:wght@400;700&family=Lato:wght@300;400;700&display=swap">
-
-    <!-- Dependencies -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
-        /* ===== ISLAMIC THEME: EMERALD & GOLD ===== */
         :root {
             --emerald-deep:   #0d3b2e;
             --emerald-mid:    #1a5c44;
@@ -66,12 +61,10 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.18)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E");
         }
 
-        /* ===== TYPOGRAPHY ===== */
         .font-arabic { font-family: 'Amiri', serif; direction: rtl; }
         .font-calligraphy { font-family: 'Cinzel Decorative', serif; }
         .font-body { font-family: 'Lato', sans-serif; }
 
-        /* ===== GOLD DIVIDERS ===== */
         .gold-divider {
             display: flex;
             align-items: center;
@@ -88,7 +81,6 @@
         }
         .gold-divider .ornament { color: var(--gold-bright); font-size: 1rem; }
 
-        /* ===== GOLD BORDER FRAMES ===== */
         .gold-frame { border: 2px solid var(--gold-bright); border-radius: 0; position: relative; }
         .gold-frame::before, .gold-frame::after { content: '◆'; position: absolute; color: var(--gold-bright); font-size: 0.7rem; }
         .gold-frame::before { top: -0.6rem; left: 50%; transform: translateX(-50%); }
@@ -99,10 +91,8 @@
         .corner-frame::before { top: 0; left: 0; border-width: 2px 0 0 2px; }
         .corner-frame::after  { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
 
-        /* ===== LAYOUT ===== */
         #root { min-height: 100vh; }
 
-        /* Desktop sidebar */
         .sidebar-islamic {
             background: var(--emerald-deep);
             background-image:
@@ -121,10 +111,8 @@
         .sidebar-date { font-family: 'Lato', sans-serif; color: var(--gold-pale); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-top: 1rem; }
         .sidebar-arabic { font-family: 'Amiri', serif; font-size: 2rem; color: var(--gold-light); margin-bottom: 1.5rem; }
 
-        /* ===== SECTIONS ===== */
         section { padding: 3rem 0; }
 
-        /* Welcome/Cover Section */
         #home {
             background: var(--emerald-deep);
             background-image:
@@ -177,7 +165,6 @@
         .scroll-dot:nth-child(3) { animation-delay: 0.4s; }
         @keyframes scrollBounce { 0%, 100% { opacity: 0.3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(3px); } }
 
-        /* ===== MEMPELAI SECTION ===== */
         #bride { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 0; }
 
         .section-title { font-family: 'Cinzel Decorative', serif; color: var(--emerald-deep); font-size: 1.4rem; text-align: center; margin-bottom: 0.5rem; }
@@ -191,7 +178,6 @@
         .person-parents .label { color: var(--gold-bright); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.25rem; }
         .couple-connector { font-family: 'Amiri', serif; font-size: 4rem; color: var(--gold-bright); text-align: center; line-height: 1; margin: 1rem 0; }
 
-        /* ===== QUR'AN SECTION ===== */
         #quran {
             background: var(--emerald-deep);
             background-image:
@@ -208,7 +194,6 @@
         .verse-card::before { top: 0.5rem; left: 0.75rem; }
         .verse-card::after  { bottom: 0.5rem; right: 0.75rem; transform: rotate(180deg); }
 
-        /* ===== WEDDING DATE SECTION ===== */
         #wedding-date { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
 
         .countdown-box { display: flex; justify-content: center; gap: 0.75rem; margin: 1.5rem 0; }
@@ -230,7 +215,6 @@
         .btn-outline-islamic { background: transparent; color: var(--emerald-deep); border: 1px solid var(--emerald-deep); font-family: 'Lato', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.6rem 1.5rem; border-radius: 0; transition: all 0.3s ease; text-decoration: none; display: inline-block; cursor: pointer; }
         .btn-outline-islamic:hover { background: var(--emerald-deep); color: var(--gold-light); }
 
-        /* ===== GALLERY ===== */
         #gallery { background: var(--emerald-mid); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
         #gallery .section-title { color: var(--gold-light); }
         .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1.5rem; }
@@ -238,7 +222,6 @@
         .gallery-grid img:first-child { grid-column: span 2; aspect-ratio: 16/9; }
         .gallery-grid img:hover { transform: scale(1.02); }
 
-        /* ===== LOVE GIFT ===== */
         #love-gift { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
         .gift-card { background: var(--white); border: 1px solid rgba(201,168,76,0.3); padding: 1.5rem; margin: 1rem 0; box-shadow: 0 2px 12px rgba(13,59,46,0.06); }
         .gift-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
@@ -250,7 +233,6 @@
         .copy-btn { background: var(--emerald-deep); color: var(--gold-light); border: none; padding: 0.25rem 0.75rem; font-size: 0.75rem; cursor: pointer; transition: background 0.2s; }
         .copy-btn:hover { background: var(--gold-bright); color: var(--emerald-deep); }
 
-        /* ===== COMMENT / UCAPAN ===== */
         #comment { background: var(--emerald-deep); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.08)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
         #comment .section-title { color: var(--gold-light); }
         .comment-form { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.3); padding: 1.5rem; margin-bottom: 1.5rem; }
@@ -265,13 +247,11 @@
         .comment-presence { font-size: 0.7rem; color: var(--gold-pale); margin-left: 0.5rem; }
         .comment-text { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: var(--gold-pale); margin-top: 0.4rem; line-height: 1.6; }
 
-        /* ===== CLOSING / FOOTER ===== */
         #closing { background: var(--emerald-deep); background-image: radial-gradient(ellipse at bottom, rgba(201,168,76,0.2) 0%, transparent 60%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.1)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3Cpolygon points='40,15 65,28.75 65,51.25 40,65 15,51.25 15,28.75'/%3E%3C/g%3E%3C/svg%3E"); padding: 4rem 1.5rem; text-align: center; color: var(--cream); }
         .closing-arabic { font-family: 'Amiri', serif; font-size: 2rem; color: var(--gold-light); margin-bottom: 0.5rem; }
         .closing-salam { font-family: 'Cinzel Decorative', serif; font-size: 0.85rem; color: var(--gold-pale); letter-spacing: 2px; line-height: 2; }
         .footer-credit { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(201,168,76,0.2); font-family: 'Lato', sans-serif; font-size: 0.75rem; color: rgba(253,248,239,0.5); }
 
-        /* ===== WELCOME OVERLAY ===== */
         #welcome {
             position: fixed;
             inset: 0;
@@ -303,7 +283,6 @@
         .welcome-guest-name { font-family: 'Cinzel Decorative', serif; font-size: 1rem; color: var(--gold-light); margin-bottom: 2rem; position: relative; z-index: 1; }
         .welcome-separator { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-bright), transparent); margin: 1rem auto; position: relative; z-index: 1; }
 
-        /* ===== NAVBAR ===== */
         #navbar-menu { background: var(--emerald-deep); border-top: 1px solid rgba(201,168,76,0.3) !important; }
         #navbar-menu .nav-link { color: var(--gold-pale) !important; text-align: center; padding: 0.5rem 0.3rem; font-family: 'Lato', sans-serif; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 100%; }
         #navbar-menu .nav-link:hover, #navbar-menu .nav-link.active { color: var(--gold-bright) !important; }
@@ -311,20 +290,16 @@
         #navbar-menu .nav-link span { line-height: 1; display: block; }
         #navbar-menu .nav-item { display: flex; align-items: center; justify-content: center; }
 
-        /* ===== FLOATING BUTTONS ===== */
         .floating-btns { position: fixed; bottom: 10vh; right: 1rem; z-index: 1030; display: flex; flex-direction: column; gap: 0.5rem; }
         .floating-btn { width: 40px; height: 40px; background: var(--emerald-deep); border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
         .floating-btn:hover { background: var(--gold-bright); color: var(--emerald-deep); }
 
-        /* ===== WAVE SEPARATOR ===== */
         .wave-sep { line-height: 0; }
         .wave-sep svg { display: block; }
 
-        /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in-up { animation: fadeInUp 0.8s ease forwards; }
 
-        /* ===== LOVE STORY ===== */
         #love-story { background: var(--white); padding: 3rem 1.5rem; }
         .story-timeline { position: relative; padding-left: 2.5rem; margin-top: 1.5rem; }
         .story-timeline::before { content: ''; position: absolute; left: 0.75rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--gold-bright), var(--emerald-light), var(--gold-bright)); }
@@ -333,12 +308,10 @@
         .story-title { font-family: 'Cinzel Decorative', serif; font-size: 0.9rem; color: var(--emerald-deep); margin-bottom: 0.5rem; }
         .story-text { font-size: 0.875rem; color: var(--text-mid); line-height: 1.8; }
 
-        /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: var(--emerald-deep); }
         ::-webkit-scrollbar-thumb { background: var(--gold-bright); }
 
-        /* ===== GLITTER CANVAS ===== */
         .glitter-canvas {
             position: fixed;
             inset: 0;
@@ -346,7 +319,6 @@
             z-index: 9998;
         }
 
-        /* ===== HANGING STARS ===== */
         .hanging-stars {
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
@@ -376,7 +348,6 @@
             50%       { opacity: 0.3; transform: scale(0.7); }
         }
 
-        /* ===== WELCOME FLOATING STARS ===== */
         .welcome-stars {
             position: absolute;
             inset: 0;
@@ -397,7 +368,117 @@
             100% { opacity: 0; transform: translateY(-110px) rotate(360deg) scale(1.3); }
         }
 
-        /* ===== RESPONSIVE ===== */
+        /* =============================================
+           SWEEP DOWN ANIMATION SYSTEM
+           ============================================= */
+
+        /* Base state: elements hidden above their position */
+        .sweep-down {
+            opacity: 0;
+            transform: translateY(-40px);
+            transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        /* Revealed state */
+        .sweep-down.swept {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stagger delays for child elements */
+        .sweep-down:nth-child(1)  { transition-delay: 0s;    }
+        .sweep-down:nth-child(2)  { transition-delay: 0.08s; }
+        .sweep-down:nth-child(3)  { transition-delay: 0.16s; }
+        .sweep-down:nth-child(4)  { transition-delay: 0.24s; }
+        .sweep-down:nth-child(5)  { transition-delay: 0.32s; }
+        .sweep-down:nth-child(6)  { transition-delay: 0.40s; }
+        .sweep-down:nth-child(7)  { transition-delay: 0.48s; }
+        .sweep-down:nth-child(8)  { transition-delay: 0.56s; }
+
+        /* Custom delays for nested staggering */
+        .sweep-down[data-delay="1"] { transition-delay: 0.1s; }
+        .sweep-down[data-delay="2"] { transition-delay: 0.2s; }
+        .sweep-down[data-delay="3"] { transition-delay: 0.3s; }
+        .sweep-down[data-delay="4"] { transition-delay: 0.4s; }
+        .sweep-down[data-delay="5"] { transition-delay: 0.5s; }
+        .sweep-down[data-delay="6"] { transition-delay: 0.6s; }
+        .sweep-down[data-delay="7"] { transition-delay: 0.7s; }
+        .sweep-down[data-delay="8"] { transition-delay: 0.8s; }
+
+        /* Wipe-from-top curtain effect on sections */
+        .section-sweep {
+            clip-path: inset(0 0 100% 0);
+            transition: clip-path 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .section-sweep.swept {
+            clip-path: inset(0 0 0% 0);
+        }
+
+        /* Gold shimmer line that sweeps down before content appears */
+        section {
+            position: relative;
+        }
+        section::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-bright), var(--gold-light), var(--gold-bright), transparent);
+            transform: scaleX(0);
+            transform-origin: left center;
+            transition: transform 0.5s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+        section.section-entered::after {
+            transform: scaleX(1);
+        }
+
+        /* Countdown units sweep in individually */
+        .countdown-unit {
+            opacity: 0;
+            transform: translateY(-30px);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .countdown-unit.swept {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gallery items sweep */
+        .gallery-grid img {
+            opacity: 0;
+            transform: translateY(-25px);
+            transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .gallery-grid img.swept {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        /* Story items sweep */
+        .story-item {
+            opacity: 0;
+            transform: translateY(-35px);
+            transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .story-item.swept {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Comment items sweep */
+        .comment-item {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .comment-item.swept {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         @media (max-width: 575px) {
             .sidebar-islamic { display: none !important; }
         }
@@ -406,14 +487,10 @@
 
 <body data-audio="./assets/music/pure-love-304010.mp3" data-confetti="true" data-time="2026-01-18 00:00">
 
-    <!-- GLITTER CANVAS (fixed overlay, pointer-events:none) -->
     <canvas class="glitter-canvas" id="glitter-canvas"></canvas>
 
-    <!-- WELCOME OVERLAY -->
     <div id="welcome">
-        <!-- Floating stars background -->
         <div class="welcome-stars" id="welcome-stars"></div>
-        <!-- Hanging stars in welcome -->
         <div class="hanging-stars" id="welcome-hanging-stars"></div>
 
         <div class="welcome-crescent">☪</div>
@@ -430,12 +507,9 @@
         </button>
     </div>
 
-    <!-- ROOT INVITATION -->
     <div class="row m-0 p-0" id="root">
 
-        <!-- ===== DESKTOP SIDEBAR ===== -->
         <div class="sticky-top vh-100 d-none d-sm-flex col-sm-5 col-md-6 col-lg-7 sidebar-islamic">
-            <!-- Hanging stars inside sidebar -->
             <div class="hanging-stars" id="hanging-stars"></div>
             <div class="sidebar-content">
                 <div class="sidebar-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
@@ -452,39 +526,36 @@
             </div>
         </div>
 
-        <!-- ===== MAIN CONTENT ===== -->
         <div class="col-sm-7 col-md-6 col-lg-5 m-0 p-0" style="position:relative;">
-            <!-- Hanging stars in main content -->
             <div id="main-hanging-stars" style="position:absolute; top:0; left:0; right:0; height:0; pointer-events:none; z-index:1020; overflow:visible;"></div>
             <main data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-root-margin="25% 0% 0% 0%" tabindex="0">
 
                 <!-- HOME -->
                 <section id="home">
-                    <div class="home-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
-                    <div class="gold-divider" style="width:200px; margin:0 auto 1rem;"><span class="ornament" style="color:var(--gold-bright);">☪</span></div>
-                    <p class="invitation-label">Undangan Pernikahan</p>
+                    <div class="home-arabic sweep-down">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+                    <div class="gold-divider sweep-down" style="width:200px; margin:0 auto 1rem;"><span class="ornament" style="color:var(--gold-bright);">☪</span></div>
+                    <p class="invitation-label sweep-down">Undangan Pernikahan</p>
 
-                    <div class="couple-photo-wrapper">
+                    <div class="couple-photo-wrapper sweep-down">
                         <img src="./assets/images/placeholder.webp" data-src="./assets/images/pasangan-pengantin.png" alt="Pasangan" class="couple-photo">
                     </div>
 
-                    <div class="home-names">Muhibbuddin., S.Pd</div>
-                    <div class="home-ampersand">&amp;</div>
-                    <div class="home-names">Raudhatun nisa., A.Md.Kep</div>
-                    <div class="home-date">14 · April · 2026</div>
+                    <div class="home-names sweep-down">Muhibbuddin., S.Pd</div>
+                    <div class="home-ampersand sweep-down">&amp;</div>
+                    <div class="home-names sweep-down">Raudhatun nisa., A.Md.Kep</div>
+                    <div class="home-date sweep-down">14 · April · 2026</div>
 
-                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Muhibbuddin+%26+Raudhatun+Nisa&dates=20260409T020000Z/20260409T060000Z&details=Acara+Pernikahan+Muhibbuddin%2C+S.Pd+%26+Raudhatun+Nisa%2C+A.Md.Kep&location=Ranto%2C+Kec.+Meurah+Mulia%2C+Kabupaten+Aceh+Utara%2C+Aceh%2C+Indonesia" target="_blank" class="btn-islamic" style="font-size:0.7rem; padding:0.4rem 1.2rem;">
+                    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Muhibbuddin+%26+Raudhatun+Nisa&dates=20260409T020000Z/20260409T060000Z&details=Acara+Pernikahan+Muhibbuddin%2C+S.Pd+%26+Raudhatun+Nisa%2C+A.Md.Kep&location=Ranto%2C+Kec.+Meurah+Mulia%2C+Kabupaten+Aceh+Utara%2C+Aceh%2C+Indonesia" target="_blank" class="btn-islamic sweep-down" style="font-size:0.7rem; padding:0.4rem 1.2rem;">
                         <i class="fa-solid fa-calendar-check me-2"></i>Save The Date
                     </a>
 
-                    <div class="scroll-indicator">
+                    <div class="scroll-indicator sweep-down">
                         <div class="scroll-dot"></div>
                         <div class="scroll-dot"></div>
                         <div class="scroll-dot"></div>
                     </div>
                 </section>
 
-                <!-- WAVE -->
                 <div class="wave-sep">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
                         <path fill="#fdf8ef" d="M0,0 C360,60 1080,0 1440,60 L1440,60 L0,60 Z"/>
@@ -495,17 +566,16 @@
                 <!-- MEMPELAI -->
                 <section id="bride">
                     <div class="container px-3">
-                        <div class="font-arabic text-center mb-2" style="font-size:1.8rem; color:var(--emerald-deep);">
+                        <div class="font-arabic text-center mb-2 sweep-down" style="font-size:1.8rem; color:var(--emerald-deep);">
                             وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
                         </div>
-                        <div class="gold-divider"><span class="ornament">◆</span></div>
-                        <h2 class="section-title">Mempelai</h2>
-                        <p style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:1.5rem;">
+                        <div class="gold-divider sweep-down"><span class="ornament">◆</span></div>
+                        <h2 class="section-title sweep-down">Mempelai</h2>
+                        <p class="sweep-down" style="text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:1.5rem;">
                             Dengan penuh syukur dan bahagia, kami mengundang Anda untuk menyaksikan pernikahan kami
                         </p>
 
-                        <!-- Groom -->
-                        <div class="person-card">
+                        <div class="person-card sweep-down" data-delay="5">
                             <img src="./assets/images/placeholder.webp" data-src="./assets/images/cowo.png" alt="Deni" class="person-photo">
                             <div class="person-name">Muhibbuddin., S.Pd</div>
                             <div class="gold-divider" style="margin:0.75rem 0;"><span class="ornament" style="font-size:0.8rem;">◆</span></div>
@@ -516,10 +586,9 @@
                             </div>
                         </div>
 
-                        <div class="couple-connector">&amp;</div>
+                        <div class="couple-connector sweep-down" data-delay="6">&amp;</div>
 
-                        <!-- Bride -->
-                        <div class="person-card">
+                        <div class="person-card sweep-down" data-delay="7">
                             <img src="./assets/images/placeholder.webp" data-src="./assets/images/cewe.png" alt="Helma" class="person-photo">
                             <div class="person-name">Raudhatun nisa., A.Md.Kep</div>
                             <div class="gold-divider" style="margin:0.75rem 0;"><span class="ornament" style="font-size:0.8rem;">◆</span></div>
@@ -535,10 +604,10 @@
                 <!-- QUR'AN -->
                 <section id="quran">
                     <div class="container px-3">
-                        <h2 class="section-title" style="color:var(--gold-light);">Firman Allah SWT</h2>
-                        <div class="gold-divider"><span class="ornament">☪</span></div>
+                        <h2 class="section-title sweep-down" style="color:var(--gold-light);">Firman Allah SWT</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament">☪</span></div>
 
-                        <div class="verse-card">
+                        <div class="verse-card sweep-down" data-delay="3">
                             <div class="font-arabic mb-3" style="font-size:1.5rem; color:var(--gold-light); line-height:2.2;">
                                 وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا
                             </div>
@@ -546,14 +615,13 @@
                             <p class="quran-ref">QS. Ar-Rum: 21</p>
                         </div>
 
-                        <div class="verse-card" style="margin-top:1rem;">
+                        <div class="verse-card sweep-down" data-delay="5" style="margin-top:1rem;">
                             <p class="quran-verse">Dan segala sesuatu Kami ciptakan berpasang-pasangan agar kamu mengingat (kebesaran Allah).</p>
                             <p class="quran-ref">QS. Adh-Dhariyat: 49</p>
                         </div>
                     </div>
                 </section>
 
-                <!-- WAVE -->
                 <div class="wave-sep" style="background:var(--emerald-deep);">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
                         <path fill="#fdf8ef" d="M0,60 C360,0 1080,60 1440,0 L1440,60 L0,60 Z"/>
@@ -563,8 +631,8 @@
                 <!-- LOVE STORY -->
                 <section id="love-story">
                     <div class="container px-3">
-                        <h2 class="section-title">Kisah Cinta</h2>
-                        <div class="gold-divider"><span class="ornament">◆</span></div>
+                        <h2 class="section-title sweep-down">Kisah Cinta</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament">◆</span></div>
 
                         <div class="story-timeline">
                             <div class="story-item">
@@ -589,7 +657,6 @@
                     </div>
                 </section>
 
-                <!-- WAVE -->
                 <div class="wave-sep" style="background:var(--cream);">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
                         <path fill="#fdf8ef" d="M0,0 C360,60 1080,0 1440,60 L1440,0 L0,0 Z"/>
@@ -599,8 +666,8 @@
                 <!-- WEDDING DATE -->
                 <section id="wedding-date">
                     <div class="container px-3">
-                        <h2 class="section-title">Moment Bahagia</h2>
-                        <div class="gold-divider"><span class="ornament">◆</span></div>
+                        <h2 class="section-title sweep-down">Moment Bahagia</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament">◆</span></div>
 
                         <div class="countdown-box">
                             <div class="countdown-unit">
@@ -621,17 +688,17 @@
                             </div>
                         </div>
 
-                        <p style="text-align:center; font-size:0.85rem; color:var(--text-mid); margin:1rem 0;">
+                        <p class="sweep-down" style="text-align:center; font-size:0.85rem; color:var(--text-mid); margin:1rem 0;">
                             Dengan memohon rahmat dan ridho Allah Subhanahu Wa Ta'ala, insyaAllah kami menyelenggarakan:
                         </p>
 
-                        <div class="event-card">
+                        <div class="event-card sweep-down" data-delay="4">
                             <div class="event-name">Akad &amp; Resepsi Pernikahan</div>
                             <div class="event-date">Selasa, 14 April 2026</div>
                             <div class="event-time"><i class="fa-regular fa-clock me-1"></i>Pukul 09.00 WIB – Selesai</div>
                         </div>
 
-                        <div style="text-align:center; margin-top:1.5rem;">
+                        <div class="sweep-down" data-delay="5" style="text-align:center; margin-top:1.5rem;">
                             <a href="https://maps.app.goo.gl/AszGEPKgCScoFMg58" target="_blank" class="btn-islamic">
                                 <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
                             </a>
@@ -640,13 +707,13 @@
                             </p>
                         </div>
 
-                        <div class="event-card">
+                        <div class="event-card sweep-down" data-delay="6">
                             <div class="event-name">Preh Dara Baro</div>
                             <div class="event-date">Sabtu, 18 April 2026</div>
                             <div class="event-time"><i class="fa-regular fa-clock me-1"></i>Pukul 09.00 WIB – Selesai</div>
                         </div>
 
-                        <div style="text-align:center; margin-top:1.5rem;">
+                        <div class="sweep-down" data-delay="7" style="text-align:center; margin-top:1.5rem;">
                             <a href="https://maps.app.goo.gl/KbAoq8fJEUKz4tLP6" target="_blank" class="btn-islamic">
                                 <i class="fa-solid fa-map-location-dot me-2"></i>Lihat Google Maps
                             </a>
@@ -660,8 +727,8 @@
                 <!-- GALLERY -->
                 <section id="gallery">
                     <div class="container px-3">
-                        <h2 class="section-title">Galeri</h2>
-                        <div class="gold-divider"><span class="ornament" style="color:var(--gold-light);">◆</span></div>
+                        <h2 class="section-title sweep-down">Galeri</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament" style="color:var(--gold-light);">◆</span></div>
 
                         <div class="gallery-grid">
                             <img src="./assets/images/placeholder.webp" data-src="https://picsum.photos/1280/720?random=1" alt="gallery 1">
@@ -673,7 +740,6 @@
                     </div>
                 </section>
 
-                <!-- WAVE -->
                 <div class="wave-sep" style="background:var(--emerald-mid);">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 60">
                         <path fill="#fdf8ef" d="M0,0 C360,60 1080,0 1440,60 L1440,0 L0,0 Z"/>
@@ -683,14 +749,13 @@
                 <!-- LOVE GIFT -->
                 <section id="love-gift">
                     <div class="container px-3">
-                        <h2 class="section-title">Love Gift</h2>
-                        <div class="gold-divider"><span class="ornament">◆</span></div>
-                        <p style="text-align:center; font-size:0.85rem; color:var(--text-mid); margin-bottom:1.5rem;">
+                        <h2 class="section-title sweep-down">Love Gift</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament">◆</span></div>
+                        <p class="sweep-down" style="text-align:center; font-size:0.85rem; color:var(--text-mid); margin-bottom:1.5rem;">
                             Bagi Anda yang ingin memberikan tanda kasih, dapat melalui:
                         </p>
 
-                        <!-- Transfer -->
-                        <div class="gift-card">
+                        <div class="gift-card sweep-down" data-delay="4">
                             <div class="gift-card-header">
                                 <div class="gift-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
                                 <div>
@@ -735,10 +800,10 @@
                 <!-- UCAPAN -->
                 <section id="comment">
                     <div class="container px-3">
-                        <h2 class="section-title">Ucapan &amp; Doa</h2>
-                        <div class="gold-divider"><span class="ornament">◆</span></div>
+                        <h2 class="section-title sweep-down">Ucapan &amp; Doa</h2>
+                        <div class="gold-divider sweep-down"><span class="ornament">◆</span></div>
 
-                        <div class="comment-form">
+                        <div class="comment-form sweep-down" data-delay="3">
                             <div class="mb-3">
                                 <label class="form-label-islamic"><i class="fa-solid fa-person me-2"></i>Nama</label>
                                 <input type="text" class="form-control-islamic" id="form-name" placeholder="Isikan Nama Anda" autocomplete="name">
@@ -760,7 +825,6 @@
                             </button>
                         </div>
 
-                        <!-- Sample Comments -->
                         <div id="comments">
                             <div class="comment-item">
                                 <div>
@@ -783,16 +847,16 @@
                 <!-- CLOSING -->
                 <section id="closing">
                     <div class="container px-3">
-                        <div class="closing-arabic">الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ</div>
-                        <div class="gold-divider"><span class="ornament">☪</span></div>
-                        <p style="font-size:0.9rem; color:var(--gold-pale); max-width:300px; margin:1rem auto; line-height:1.8;">
+                        <div class="closing-arabic sweep-down">الْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَ</div>
+                        <div class="gold-divider sweep-down"><span class="ornament">☪</span></div>
+                        <p class="sweep-down" style="font-size:0.9rem; color:var(--gold-pale); max-width:300px; margin:1rem auto; line-height:1.8;">
                             Terima kasih atas perhatian dan doa restu Anda, yang menjadi kebahagiaan serta kehormatan besar bagi kami.
                         </p>
-                        <div class="closing-salam">
+                        <div class="closing-salam sweep-down" data-delay="4">
                             Wassalamualaikum<br>Warahmatullahi Wabarakatuh
                         </div>
-                        <div class="gold-divider" style="margin-top:2rem;"><span class="ornament">◆</span></div>
-                        <div class="footer-credit">
+                        <div class="gold-divider sweep-down" data-delay="5" style="margin-top:2rem;"><span class="ornament">◆</span></div>
+                        <div class="footer-credit sweep-down" data-delay="6">
                             Build by -
                             <img src="./assets/images/favicon.svg" alt="icon" style="width:14px; height:14px; vertical-align:middle; margin: 0 2px;">
                             Developer Dadakan
@@ -801,7 +865,6 @@
                 </section>
             </main>
 
-            <!-- NAVBAR BOTTOM -->
             <nav class="navbar navbar-expand sticky-bottom p-0" id="navbar-menu" style="height:60px;">
                 <ul class="navbar-nav nav-justified w-100 align-items-stretch h-100">
                     <li class="nav-item">
@@ -839,7 +902,6 @@
         </div>
     </div>
 
-    <!-- FLOATING BUTTONS -->
     <div class="floating-btns">
         <button class="floating-btn" id="btn-music" title="Putar Musik">
             <i class="fa-solid fa-music"></i>
@@ -906,7 +968,7 @@
         if (!name || !text) { alert('Mohon lengkapi nama dan ucapan Anda.'); return; }
         const presText = pres.options[pres.selectedIndex].text;
         const div = document.createElement('div');
-        div.className = 'comment-item';
+        div.className = 'comment-item swept';
         div.style.animation = 'fadeInUp 0.5s ease';
         div.innerHTML = `<div><span class="comment-author">${name}</span><span class="comment-presence">${pres.value !== '0' ? presText : ''}</span></div><p class="comment-text">${text}</p>`;
         document.getElementById('comments').prepend(div);
@@ -951,11 +1013,9 @@
         const el = document.getElementById('guest-name');
         if (!el) return;
         let guestName = '';
-
         const params = new URLSearchParams(window.location.search);
         guestName = params.get('to') || params.get('name') || '';
         if (guestName) guestName = decodeURIComponent(guestName.replace(/\+/g, ' '));
-
         if (!guestName) {
             const path = decodeURIComponent(window.location.pathname);
             const parts = path.split('/').filter(Boolean);
@@ -964,7 +1024,6 @@
                 guestName = last.replace(/-/g, ' ');
             }
         }
-
         if (guestName) el.textContent = guestName;
     })();
 
@@ -1018,7 +1077,6 @@
             ctx.restore();
         };
 
-        // Continuous rain of glitter
         setInterval(() => {
             if (particles.length < 90) particles.push(new Particle());
         }, 110);
@@ -1030,7 +1088,6 @@
         }
         animate();
 
-        // Burst on click
         document.addEventListener('click', function(e) {
             for (let i = 0; i < 16; i++) {
                 const p = new Particle(e.clientX, e.clientY);
@@ -1070,8 +1127,6 @@
     (function() {
         const container = document.getElementById('main-hanging-stars');
         if (!container) return;
-        const col = container.closest('.col-sm-7, .col-sm-5, [class*="col-"]');
-
         const configs = [
             { left: '8%',   lineH: '60px',  size: '0.8rem', swing: '4s',   twinkle: '2.5s', delay: '0.2s' },
             { left: '25%',  lineH: '100px', size: '0.7rem', swing: '5.5s', twinkle: '3.1s', delay: '0.9s' },
@@ -1080,7 +1135,6 @@
             { left: '82%',  lineH: '65px',  size: '0.85rem',swing: '3.9s', twinkle: '3.4s', delay: '0s' },
             { left: '95%',  lineH: '90px',  size: '0.7rem', swing: '5.2s', twinkle: '2.2s', delay: '0.7s' },
         ];
-
         configs.forEach(cfg => {
             const star = document.createElement('div');
             star.className = 'hanging-star';
@@ -1092,7 +1146,6 @@
             container.appendChild(star);
         });
 
-        // Sync container to match the actual column position & size on screen
         function syncPosition() {
             const parent = container.parentElement;
             if (!parent) return;
@@ -1109,10 +1162,10 @@
         syncPosition();
         window.addEventListener('resize', syncPosition);
     })();
+
     (function() {
         const container = document.getElementById('hanging-stars');
         if (!container) return;
-
         const configs = [
             { left: '8%',   lineH: '85px',  size: '1rem',   swing: '3.2s', twinkle: '2s',   delay: '0s' },
             { left: '22%',  lineH: '130px', size: '0.8rem', swing: '4.5s', twinkle: '3s',   delay: '0.7s' },
@@ -1122,7 +1175,6 @@
             { left: '85%',  lineH: '50px',  size: '0.9rem', swing: '3.5s', twinkle: '3.3s', delay: '1.5s' },
             { left: '94%',  lineH: '95px',  size: '0.85rem',swing: '4.8s', twinkle: '2.1s', delay: '0.2s' },
         ];
-
         configs.forEach(cfg => {
             const star = document.createElement('div');
             star.className = 'hanging-star';
@@ -1154,6 +1206,140 @@
             `;
             container.appendChild(star);
         }
+    })();
+
+    // =============================================
+    // SWEEP DOWN ANIMATION — Repeats every scroll
+    // =============================================
+    (function() {
+
+        // Track pending stagger timeouts so we can cancel on leave
+        const staggerTimers = new WeakMap();
+
+        function clearTimers(el) {
+            const t = staggerTimers.get(el);
+            if (t) { t.forEach(clearTimeout); staggerTimers.delete(el); }
+        }
+
+        // 1. Sweep down for .sweep-down elements — replay every time
+        const sweepObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('swept');
+                } else {
+                    entry.target.classList.remove('swept');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -30px 0px' });
+
+        document.querySelectorAll('.sweep-down').forEach(el => sweepObserver.observe(el));
+
+        // 2. Shimmer line — replay every time section enters/leaves
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-entered');
+                } else {
+                    entry.target.classList.remove('section-entered');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('section').forEach(sec => sectionObserver.observe(sec));
+
+        // 3. Countdown units — staggered, replays on every visit
+        const countdownObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const units = document.querySelectorAll('.countdown-unit');
+                if (entry.isIntersecting) {
+                    clearTimers(entry.target);
+                    const timers = [];
+                    units.forEach((unit, i) => {
+                        timers.push(setTimeout(() => unit.classList.add('swept'), i * 100));
+                    });
+                    staggerTimers.set(entry.target, timers);
+                } else {
+                    clearTimers(entry.target);
+                    units.forEach(unit => unit.classList.remove('swept'));
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const countdownBox = document.querySelector('.countdown-box');
+        if (countdownBox) countdownObserver.observe(countdownBox);
+
+        // 4. Gallery images — cascade, replays
+        const galleryObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const imgs = document.querySelectorAll('.gallery-grid img');
+                if (entry.isIntersecting) {
+                    clearTimers(entry.target);
+                    const timers = [];
+                    imgs.forEach((img, i) => {
+                        timers.push(setTimeout(() => img.classList.add('swept'), i * 90));
+                    });
+                    staggerTimers.set(entry.target, timers);
+                } else {
+                    clearTimers(entry.target);
+                    imgs.forEach(img => img.classList.remove('swept'));
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const galleryGrid = document.querySelector('.gallery-grid');
+        if (galleryGrid) galleryObserver.observe(galleryGrid);
+
+        // 5. Story items — cascade, replays
+        const storyObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const items = document.querySelectorAll('.story-item');
+                if (entry.isIntersecting) {
+                    clearTimers(entry.target);
+                    const timers = [];
+                    items.forEach((item, i) => {
+                        timers.push(setTimeout(() => item.classList.add('swept'), i * 180));
+                    });
+                    staggerTimers.set(entry.target, timers);
+                } else {
+                    clearTimers(entry.target);
+                    items.forEach(item => item.classList.remove('swept'));
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const storyTimeline = document.querySelector('.story-timeline');
+        if (storyTimeline) storyObserver.observe(storyTimeline);
+
+        // 6. Comment items — cascade, replays
+        const commentObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const items = entry.target.querySelectorAll('.comment-item');
+                if (entry.isIntersecting) {
+                    clearTimers(entry.target);
+                    const timers = [];
+                    items.forEach((item, i) => {
+                        timers.push(setTimeout(() => item.classList.add('swept'), i * 140));
+                    });
+                    staggerTimers.set(entry.target, timers);
+                } else {
+                    clearTimers(entry.target);
+                    items.forEach(item => item.classList.remove('swept'));
+                }
+            });
+        }, { threshold: 0.05 });
+
+        const commentsDiv = document.getElementById('comments');
+        if (commentsDiv) commentObserver.observe(commentsDiv);
+
+        // 7. Trigger home section immediately on load
+        setTimeout(() => {
+            document.querySelectorAll('#home .sweep-down').forEach((el, i) => {
+                setTimeout(() => el.classList.add('swept'), 300 + i * 100);
+            });
+            const homeSection = document.getElementById('home');
+            if (homeSection) homeSection.classList.add('section-entered');
+        }, 200);
+
     })();
     </script>
 </body>
