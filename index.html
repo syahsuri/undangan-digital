@@ -67,16 +67,9 @@
         }
 
         /* ===== TYPOGRAPHY ===== */
-        .font-arabic {
-            font-family: 'Amiri', serif;
-            direction: rtl;
-        }
-        .font-calligraphy {
-            font-family: 'Cinzel Decorative', serif;
-        }
-        .font-body {
-            font-family: 'Lato', sans-serif;
-        }
+        .font-arabic { font-family: 'Amiri', serif; direction: rtl; }
+        .font-calligraphy { font-family: 'Cinzel Decorative', serif; }
+        .font-body { font-family: 'Lato', sans-serif; }
 
         /* ===== GOLD DIVIDERS ===== */
         .gold-divider {
@@ -93,53 +86,21 @@
             height: 1px;
             background: linear-gradient(to right, transparent, var(--gold-bright), transparent);
         }
-        .gold-divider .ornament {
-            color: var(--gold-bright);
-            font-size: 1rem;
-        }
+        .gold-divider .ornament { color: var(--gold-bright); font-size: 1rem; }
 
         /* ===== GOLD BORDER FRAMES ===== */
-        .gold-frame {
-            border: 2px solid var(--gold-bright);
-            border-radius: 0;
-            position: relative;
-        }
-        .gold-frame::before,
-        .gold-frame::after {
-            content: '◆';
-            position: absolute;
-            color: var(--gold-bright);
-            font-size: 0.7rem;
-        }
+        .gold-frame { border: 2px solid var(--gold-bright); border-radius: 0; position: relative; }
+        .gold-frame::before, .gold-frame::after { content: '◆'; position: absolute; color: var(--gold-bright); font-size: 0.7rem; }
         .gold-frame::before { top: -0.6rem; left: 50%; transform: translateX(-50%); }
         .gold-frame::after  { bottom: -0.6rem; left: 50%; transform: translateX(-50%); }
 
-        .corner-frame {
-            position: relative;
-            padding: 1.5rem;
-        }
-        .corner-frame::before,
-        .corner-frame::after {
-            content: '';
-            position: absolute;
-            width: 30px;
-            height: 30px;
-            border-color: var(--gold-bright);
-            border-style: solid;
-        }
-        .corner-frame::before {
-            top: 0; left: 0;
-            border-width: 2px 0 0 2px;
-        }
-        .corner-frame::after {
-            bottom: 0; right: 0;
-            border-width: 0 2px 2px 0;
-        }
+        .corner-frame { position: relative; padding: 1.5rem; }
+        .corner-frame::before, .corner-frame::after { content: ''; position: absolute; width: 30px; height: 30px; border-color: var(--gold-bright); border-style: solid; }
+        .corner-frame::before { top: 0; left: 0; border-width: 2px 0 0 2px; }
+        .corner-frame::after  { bottom: 0; right: 0; border-width: 0 2px 2px 0; }
 
         /* ===== LAYOUT ===== */
-        #root {
-            min-height: 100vh;
-        }
+        #root { min-height: 100vh; }
 
         /* Desktop sidebar */
         .sidebar-islamic {
@@ -151,42 +112,17 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            position: relative;
+            overflow: hidden;
         }
 
-        .sidebar-content {
-            text-align: center;
-            padding: 3rem 2rem;
-            color: var(--cream);
-        }
-
-        .sidebar-couple-name {
-            font-family: 'Cinzel Decorative', serif;
-            color: var(--gold-light);
-            font-size: 1.5rem;
-            line-height: 1.8;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
-        }
-
-        .sidebar-date {
-            font-family: 'Lato', sans-serif;
-            color: var(--gold-pale);
-            font-size: 0.9rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-top: 1rem;
-        }
-
-        .sidebar-arabic {
-            font-family: 'Amiri', serif;
-            font-size: 2rem;
-            color: var(--gold-light);
-            margin-bottom: 1.5rem;
-        }
+        .sidebar-content { text-align: center; padding: 3rem 2rem; color: var(--cream); position: relative; z-index: 1; }
+        .sidebar-couple-name { font-family: 'Cinzel Decorative', serif; color: var(--gold-light); font-size: 1.5rem; line-height: 1.8; text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+        .sidebar-date { font-family: 'Lato', sans-serif; color: var(--gold-pale); font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-top: 1rem; }
+        .sidebar-arabic { font-family: 'Amiri', serif; font-size: 2rem; color: var(--gold-light); margin-bottom: 1.5rem; }
 
         /* ===== SECTIONS ===== */
-        section {
-            padding: 3rem 0;
-        }
+        section { padding: 3rem 0; }
 
         /* Welcome/Cover Section */
         #home {
@@ -206,7 +142,6 @@
             position: relative;
             overflow: hidden;
         }
-
         #home::before {
             content: '';
             position: absolute;
@@ -214,33 +149,12 @@
             background: linear-gradient(180deg, rgba(13,59,46,0.3) 0%, rgba(13,59,46,0.7) 100%);
             pointer-events: none;
         }
-
         #home > * { position: relative; z-index: 1; }
 
-        .home-arabic {
-            font-family: 'Amiri', serif;
-            font-size: 2.2rem;
-            color: var(--gold-light);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            margin-bottom: 0.5rem;
-        }
+        .home-arabic { font-family: 'Amiri', serif; font-size: 2.2rem; color: var(--gold-light); text-shadow: 0 2px 8px rgba(0,0,0,0.3); margin-bottom: 0.5rem; }
+        .invitation-label { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-pale); margin-bottom: 1.5rem; }
 
-        .invitation-label {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold-pale);
-            margin-bottom: 1.5rem;
-        }
-
-        .couple-photo-wrapper {
-            position: relative;
-            width: 160px;
-            height: 160px;
-            margin: 1.5rem auto;
-        }
-
+        .couple-photo-wrapper { position: relative; width: 160px; height: 160px; margin: 1.5rem auto; }
         .couple-photo-wrapper::before {
             content: '';
             position: absolute;
@@ -249,162 +163,33 @@
             background: conic-gradient(var(--gold-bright) 0deg, var(--gold-light) 90deg, var(--gold-bright) 180deg, var(--gold-light) 270deg, var(--gold-bright) 360deg);
             animation: rotateBorder 8s linear infinite;
         }
+        .couple-photo-wrapper::after { content: ''; position: absolute; inset: -4px; border-radius: 50%; background: var(--emerald-deep); }
+        @keyframes rotateBorder { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 
-        .couple-photo-wrapper::after {
-            content: '';
-            position: absolute;
-            inset: -4px;
-            border-radius: 50%;
-            background: var(--emerald-deep);
-        }
+        .couple-photo { position: relative; z-index: 1; width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 3px solid var(--emerald-deep); object-position: center 75%; }
+        .home-names { font-family: 'Cinzel Decorative', serif; font-size: 1.4rem; color: var(--gold-light); line-height: 1.7; text-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+        .home-ampersand { font-family: 'Amiri', serif; font-size: 3.5rem; color: var(--gold-bright); line-height: 1; margin: 0.25rem 0; }
+        .home-date { font-family: 'Lato', sans-serif; font-size: 0.8rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold-pale); margin: 1rem 0; }
 
-        @keyframes rotateBorder {
-            from { transform: rotate(0deg); }
-            to   { transform: rotate(360deg); }
-        }
-
-        .couple-photo {
-            position: relative;
-            z-index: 1;
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--emerald-deep);
-            object-position: center 75%;
-        }
-
-        .home-names {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.4rem;
-            color: var(--gold-light);
-            line-height: 1.7;
-            text-shadow: 0 2px 12px rgba(0,0,0,0.4);
-        }
-
-        .home-ampersand {
-            font-family: 'Amiri', serif;
-            font-size: 3.5rem;
-            color: var(--gold-bright);
-            line-height: 1;
-            margin: 0.25rem 0;
-        }
-
-        .home-date {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: var(--gold-pale);
-            margin: 1rem 0;
-        }
-
-        /* Scroll indicator */
-        .scroll-indicator {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            color: var(--gold-pale);
-            opacity: 0.6;
-            margin-top: 2rem;
-        }
-        .scroll-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--gold-bright);
-            animation: scrollBounce 1.5s infinite;
-        }
+        .scroll-indicator { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--gold-pale); opacity: 0.6; margin-top: 2rem; }
+        .scroll-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold-bright); animation: scrollBounce 1.5s infinite; }
         .scroll-dot:nth-child(2) { animation-delay: 0.2s; }
         .scroll-dot:nth-child(3) { animation-delay: 0.4s; }
-        @keyframes scrollBounce {
-            0%, 100% { opacity: 0.3; transform: translateY(0); }
-            50% { opacity: 1; transform: translateY(3px); }
-        }
+        @keyframes scrollBounce { 0%, 100% { opacity: 0.3; transform: translateY(0); } 50% { opacity: 1; transform: translateY(3px); } }
 
         /* ===== MEMPELAI SECTION ===== */
-        #bride {
-            background: var(--cream);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 3rem 0;
-        }
+        #bride { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 0; }
 
-        .section-title {
-            font-family: 'Cinzel Decorative', serif;
-            color: var(--emerald-deep);
-            font-size: 1.4rem;
-            text-align: center;
-            margin-bottom: 0.5rem;
-        }
+        .section-title { font-family: 'Cinzel Decorative', serif; color: var(--emerald-deep); font-size: 1.4rem; text-align: center; margin-bottom: 0.5rem; }
+        .section-arabic { font-family: 'Amiri', serif; font-size: 1.3rem; color: var(--gold-bright); text-align: center; }
 
-        .section-arabic {
-            font-family: 'Amiri', serif;
-            font-size: 1.3rem;
-            color: var(--gold-bright);
-            text-align: center;
-        }
-
-        .person-card {
-            background: var(--white);
-            border: 1px solid rgba(201,168,76,0.3);
-            border-radius: 0;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            position: relative;
-            margin: 1rem;
-            box-shadow: 0 4px 20px rgba(13,59,46,0.08);
-        }
-        .person-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--emerald-deep), var(--gold-bright), var(--emerald-deep));
-        }
-
-        .person-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--gold-bright);
-            box-shadow: 0 4px 16px rgba(201,168,76,0.3);
-            margin-bottom: 1rem;
-        }
-
-        .person-name {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.1rem;
-            color: var(--emerald-deep);
-            margin-bottom: 0.75rem;
-        }
-
-        .person-parents {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.875rem;
-            color: var(--text-mid);
-            line-height: 1.8;
-        }
-
-        .person-parents .label {
-            color: var(--gold-bright);
-            font-weight: 700;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-
-        .couple-connector {
-            font-family: 'Amiri', serif;
-            font-size: 4rem;
-            color: var(--gold-bright);
-            text-align: center;
-            line-height: 1;
-            margin: 1rem 0;
-        }
+        .person-card { background: var(--white); border: 1px solid rgba(201,168,76,0.3); border-radius: 0; padding: 2rem 1.5rem; text-align: center; position: relative; margin: 1rem; box-shadow: 0 4px 20px rgba(13,59,46,0.08); }
+        .person-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--emerald-deep), var(--gold-bright), var(--emerald-deep)); }
+        .person-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--gold-bright); box-shadow: 0 4px 16px rgba(201,168,76,0.3); margin-bottom: 1rem; }
+        .person-name { font-family: 'Cinzel Decorative', serif; font-size: 1.1rem; color: var(--emerald-deep); margin-bottom: 0.75rem; }
+        .person-parents { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: var(--text-mid); line-height: 1.8; }
+        .person-parents .label { color: var(--gold-bright); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 0.25rem; }
+        .couple-connector { font-family: 'Amiri', serif; font-size: 4rem; color: var(--gold-bright); text-align: center; line-height: 1; margin: 1rem 0; }
 
         /* ===== QUR'AN SECTION ===== */
         #quran {
@@ -416,372 +201,75 @@
             text-align: center;
             color: var(--cream);
         }
-
-        .quran-verse {
-            font-family: 'Amiri', serif;
-            font-size: 1.1rem;
-            color: var(--gold-pale);
-            line-height: 2;
-            max-width: 320px;
-            margin: 0 auto;
-        }
-
-        .quran-ref {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 3px;
-            color: var(--gold-bright);
-            text-transform: uppercase;
-            margin-top: 0.75rem;
-        }
-
-        .verse-card {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(201,168,76,0.3);
-            border-radius: 0;
-            padding: 2rem 1.5rem;
-            margin: 1.5rem 0;
-            position: relative;
-        }
-        .verse-card::before, .verse-card::after {
-            content: '❧';
-            position: absolute;
-            color: var(--gold-bright);
-            font-size: 1.2rem;
-        }
+        .quran-verse { font-family: 'Amiri', serif; font-size: 1.1rem; color: var(--gold-pale); line-height: 2; max-width: 320px; margin: 0 auto; }
+        .quran-ref { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 3px; color: var(--gold-bright); text-transform: uppercase; margin-top: 0.75rem; }
+        .verse-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.3); border-radius: 0; padding: 2rem 1.5rem; margin: 1.5rem 0; position: relative; }
+        .verse-card::before, .verse-card::after { content: '❧'; position: absolute; color: var(--gold-bright); font-size: 1.2rem; }
         .verse-card::before { top: 0.5rem; left: 0.75rem; }
         .verse-card::after  { bottom: 0.5rem; right: 0.75rem; transform: rotate(180deg); }
 
         /* ===== WEDDING DATE SECTION ===== */
-        #wedding-date {
-            background: var(--cream);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 3rem 1.5rem;
-        }
+        #wedding-date { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
 
-        .countdown-box {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            margin: 1.5rem 0;
-        }
-        .countdown-unit {
-            background: var(--emerald-deep);
-            color: var(--gold-light);
-            width: 64px;
-            height: 64px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-        .countdown-unit::before, .countdown-unit::after {
-            content: '';
-            position: absolute;
-            width: 8px; height: 8px;
-            border: 1px solid var(--gold-bright);
-        }
+        .countdown-box { display: flex; justify-content: center; gap: 0.75rem; margin: 1.5rem 0; }
+        .countdown-unit { background: var(--emerald-deep); color: var(--gold-light); width: 64px; height: 64px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; }
+        .countdown-unit::before, .countdown-unit::after { content: ''; position: absolute; width: 8px; height: 8px; border: 1px solid var(--gold-bright); }
         .countdown-unit::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
         .countdown-unit::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+        .countdown-num { font-family: 'Cinzel Decorative', serif; font-size: 1.4rem; line-height: 1; color: var(--gold-light); }
+        .countdown-label { font-size: 0.55rem; letter-spacing: 1px; text-transform: uppercase; color: var(--gold-pale); margin-top: 2px; }
 
-        .countdown-num {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.4rem;
-            line-height: 1;
-            color: var(--gold-light);
-        }
-        .countdown-label {
-            font-size: 0.55rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: var(--gold-pale);
-            margin-top: 2px;
-        }
+        .event-card { background: var(--white); border-left: 4px solid var(--gold-bright); padding: 1.5rem; margin: 1rem 0; box-shadow: 0 2px 12px rgba(13,59,46,0.08); position: relative; }
+        .event-card::before { content: ''; position: absolute; top: 0; right: 0; width: 60px; height: 60px; background: linear-gradient(135deg, transparent 50%, rgba(201,168,76,0.1) 50%); }
+        .event-name { font-family: 'Cinzel Decorative', serif; font-size: 1rem; color: var(--emerald-deep); margin-bottom: 0.5rem; }
+        .event-date { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.8rem; color: var(--gold-bright); letter-spacing: 2px; text-transform: uppercase; }
+        .event-time { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: var(--text-mid); margin-top: 0.25rem; }
 
-        .event-card {
-            background: var(--white);
-            border-left: 4px solid var(--gold-bright);
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 12px rgba(13,59,46,0.08);
-            position: relative;
-        }
-        .event-card::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0;
-            width: 60px; height: 60px;
-            background: linear-gradient(135deg, transparent 50%, rgba(201,168,76,0.1) 50%);
-        }
-
-        .event-name {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1rem;
-            color: var(--emerald-deep);
-            margin-bottom: 0.5rem;
-        }
-
-        .event-date {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            font-size: 0.8rem;
-            color: var(--gold-bright);
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .event-time {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.875rem;
-            color: var(--text-mid);
-            margin-top: 0.25rem;
-        }
-
-        .btn-islamic {
-            background: var(--emerald-deep);
-            color: var(--gold-light);
-            border: 1px solid var(--gold-bright);
-            font-family: 'Lato', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 0.6rem 1.5rem;
-            border-radius: 0;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-        .btn-islamic:hover {
-            background: var(--gold-bright);
-            color: var(--emerald-deep);
-        }
-
-        .btn-outline-islamic {
-            background: transparent;
-            color: var(--emerald-deep);
-            border: 1px solid var(--emerald-deep);
-            font-family: 'Lato', sans-serif;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 0.6rem 1.5rem;
-            border-radius: 0;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .btn-outline-islamic:hover {
-            background: var(--emerald-deep);
-            color: var(--gold-light);
-        }
+        .btn-islamic { background: var(--emerald-deep); color: var(--gold-light); border: 1px solid var(--gold-bright); font-family: 'Lato', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.6rem 1.5rem; border-radius: 0; transition: all 0.3s ease; text-decoration: none; display: inline-block; }
+        .btn-islamic:hover { background: var(--gold-bright); color: var(--emerald-deep); }
+        .btn-outline-islamic { background: transparent; color: var(--emerald-deep); border: 1px solid var(--emerald-deep); font-family: 'Lato', sans-serif; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.6rem 1.5rem; border-radius: 0; transition: all 0.3s ease; text-decoration: none; display: inline-block; cursor: pointer; }
+        .btn-outline-islamic:hover { background: var(--emerald-deep); color: var(--gold-light); }
 
         /* ===== GALLERY ===== */
-        #gallery {
-            background: var(--emerald-mid);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 3rem 1.5rem;
-        }
-
+        #gallery { background: var(--emerald-mid); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
         #gallery .section-title { color: var(--gold-light); }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            margin-top: 1.5rem;
-        }
-        .gallery-grid img {
-            width: 100%;
-            aspect-ratio: 1;
-            object-fit: cover;
-            border: 2px solid rgba(201,168,76,0.3);
-            transition: transform 0.3s ease;
-            cursor: pointer;
-        }
-        .gallery-grid img:first-child {
-            grid-column: span 2;
-            aspect-ratio: 16/9;
-        }
+        .gallery-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 1.5rem; }
+        .gallery-grid img { width: 100%; aspect-ratio: 1; object-fit: cover; border: 2px solid rgba(201,168,76,0.3); transition: transform 0.3s ease; cursor: pointer; }
+        .gallery-grid img:first-child { grid-column: span 2; aspect-ratio: 16/9; }
         .gallery-grid img:hover { transform: scale(1.02); }
 
         /* ===== LOVE GIFT ===== */
-        #love-gift {
-            background: var(--cream);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 3rem 1.5rem;
-        }
-
-        .gift-card {
-            background: var(--white);
-            border: 1px solid rgba(201,168,76,0.3);
-            padding: 1.5rem;
-            margin: 1rem 0;
-            box-shadow: 0 2px 12px rgba(13,59,46,0.06);
-        }
-        .gift-card-header {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 1px solid rgba(201,168,76,0.2);
-        }
-        .gift-icon {
-            width: 40px; height: 40px;
-            background: var(--emerald-deep);
-            display: flex; align-items: center; justify-content: center;
-            color: var(--gold-light);
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-        .gift-bank-name {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--emerald-deep);
-        }
-        .gift-account {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-            border-bottom: 1px dashed rgba(201,168,76,0.2);
-        }
+        #love-gift { background: var(--cream); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.12)' stroke-width='0.5'%3E%3Cpolygon points='30,3 57,18 57,42 30,57 3,42 3,18'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
+        .gift-card { background: var(--white); border: 1px solid rgba(201,168,76,0.3); padding: 1.5rem; margin: 1rem 0; box-shadow: 0 2px 12px rgba(13,59,46,0.06); }
+        .gift-card-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid rgba(201,168,76,0.2); }
+        .gift-icon { width: 40px; height: 40px; background: var(--emerald-deep); display: flex; align-items: center; justify-content: center; color: var(--gold-light); font-size: 1rem; flex-shrink: 0; }
+        .gift-bank-name { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.85rem; color: var(--emerald-deep); }
+        .gift-account { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px dashed rgba(201,168,76,0.2); }
         .gift-account:last-child { border-bottom: none; }
-        .account-num {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.875rem;
-            color: var(--text-mid);
-            letter-spacing: 1px;
-        }
-        .copy-btn {
-            background: var(--emerald-deep);
-            color: var(--gold-light);
-            border: none;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.75rem;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
+        .account-num { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: var(--text-mid); letter-spacing: 1px; }
+        .copy-btn { background: var(--emerald-deep); color: var(--gold-light); border: none; padding: 0.25rem 0.75rem; font-size: 0.75rem; cursor: pointer; transition: background 0.2s; }
         .copy-btn:hover { background: var(--gold-bright); color: var(--emerald-deep); }
 
         /* ===== COMMENT / UCAPAN ===== */
-        #comment {
-            background: var(--emerald-deep);
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.08)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 3rem 1.5rem;
-        }
-
+        #comment { background: var(--emerald-deep); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.08)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3C/g%3E%3C/svg%3E"); padding: 3rem 1.5rem; }
         #comment .section-title { color: var(--gold-light); }
-
-        .comment-form {
-            background: rgba(255,255,255,0.05);
-            border: 1px solid rgba(201,168,76,0.3);
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-label-islamic {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--gold-pale);
-            margin-bottom: 0.4rem;
-            display: block;
-        }
-
-        .form-control-islamic {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(201,168,76,0.3);
-            color: var(--cream);
-            border-radius: 0;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.9rem;
-            padding: 0.6rem 0.9rem;
-            width: 100%;
-            outline: none;
-            transition: border-color 0.2s;
-        }
+        .comment-form { background: rgba(255,255,255,0.05); border: 1px solid rgba(201,168,76,0.3); padding: 1.5rem; margin-bottom: 1.5rem; }
+        .form-label-islamic { font-family: 'Lato', sans-serif; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-pale); margin-bottom: 0.4rem; display: block; }
+        .form-control-islamic { background: rgba(255,255,255,0.08); border: 1px solid rgba(201,168,76,0.3); color: var(--cream); border-radius: 0; font-family: 'Lato', sans-serif; font-size: 0.9rem; padding: 0.6rem 0.9rem; width: 100%; outline: none; transition: border-color 0.2s; }
         .form-control-islamic::placeholder { color: rgba(253,248,239,0.4); }
         .form-control-islamic:focus { border-color: var(--gold-bright); background: rgba(255,255,255,0.12); }
-
-        .form-select-islamic {
-            background: rgba(255,255,255,0.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c9a84c' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
-            background-size: 16px;
-            border: 1px solid rgba(201,168,76,0.3);
-            color: var(--cream);
-            border-radius: 0;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.9rem;
-            padding: 0.6rem 2.5rem 0.6rem 0.9rem;
-            width: 100%;
-            appearance: none;
-            outline: none;
-        }
+        .form-select-islamic { background: rgba(255,255,255,0.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23c9a84c' d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E") no-repeat right 0.75rem center; background-size: 16px; border: 1px solid rgba(201,168,76,0.3); color: var(--cream); border-radius: 0; font-family: 'Lato', sans-serif; font-size: 0.9rem; padding: 0.6rem 2.5rem 0.6rem 0.9rem; width: 100%; appearance: none; outline: none; }
         .form-select-islamic option { background: var(--emerald-deep); color: var(--cream); }
-
-        .comment-item {
-            background: rgba(255,255,255,0.05);
-            border-left: 3px solid var(--gold-bright);
-            padding: 1rem 1rem 1rem 1.25rem;
-            margin-bottom: 0.75rem;
-        }
-        .comment-author {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            font-size: 0.875rem;
-            color: var(--gold-light);
-        }
-        .comment-presence {
-            font-size: 0.7rem;
-            color: var(--gold-pale);
-            margin-left: 0.5rem;
-        }
-        .comment-text {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.875rem;
-            color: var(--gold-pale);
-            margin-top: 0.4rem;
-            line-height: 1.6;
-        }
+        .comment-item { background: rgba(255,255,255,0.05); border-left: 3px solid var(--gold-bright); padding: 1rem 1rem 1rem 1.25rem; margin-bottom: 0.75rem; }
+        .comment-author { font-family: 'Lato', sans-serif; font-weight: 700; font-size: 0.875rem; color: var(--gold-light); }
+        .comment-presence { font-size: 0.7rem; color: var(--gold-pale); margin-left: 0.5rem; }
+        .comment-text { font-family: 'Lato', sans-serif; font-size: 0.875rem; color: var(--gold-pale); margin-top: 0.4rem; line-height: 1.6; }
 
         /* ===== CLOSING / FOOTER ===== */
-        #closing {
-            background: var(--emerald-deep);
-            background-image:
-                radial-gradient(ellipse at bottom, rgba(201,168,76,0.2) 0%, transparent 60%),
-                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.1)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3Cpolygon points='40,15 65,28.75 65,51.25 40,65 15,51.25 15,28.75'/%3E%3C/g%3E%3C/svg%3E");
-            padding: 4rem 1.5rem;
-            text-align: center;
-            color: var(--cream);
-        }
-
-        .closing-arabic {
-            font-family: 'Amiri', serif;
-            font-size: 2rem;
-            color: var(--gold-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .closing-salam {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 0.85rem;
-            color: var(--gold-pale);
-            letter-spacing: 2px;
-            line-height: 2;
-        }
-
-        .footer-credit {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(201,168,76,0.2);
-            font-family: 'Lato', sans-serif;
-            font-size: 0.75rem;
-            color: rgba(253,248,239,0.5);
-        }
+        #closing { background: var(--emerald-deep); background-image: radial-gradient(ellipse at bottom, rgba(201,168,76,0.2) 0%, transparent 60%), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='rgba(201,168,76,0.1)' stroke-width='0.5'%3E%3Cpolygon points='40,5 75,22.5 75,57.5 40,75 5,57.5 5,22.5'/%3E%3Cpolygon points='40,15 65,28.75 65,51.25 40,65 15,51.25 15,28.75'/%3E%3C/g%3E%3C/svg%3E"); padding: 4rem 1.5rem; text-align: center; color: var(--cream); }
+        .closing-arabic { font-family: 'Amiri', serif; font-size: 2rem; color: var(--gold-light); margin-bottom: 0.5rem; }
+        .closing-salam { font-family: 'Cinzel Decorative', serif; font-size: 0.85rem; color: var(--gold-pale); letter-spacing: 2px; line-height: 2; }
+        .footer-credit { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(201,168,76,0.2); font-family: 'Lato', sans-serif; font-size: 0.75rem; color: rgba(253,248,239,0.5); }
 
         /* ===== WELCOME OVERLAY ===== */
         #welcome {
@@ -801,201 +289,113 @@
             padding: 2rem;
             color: var(--cream);
             transition: opacity 0.8s ease, visibility 0.8s ease;
+            overflow: hidden;
         }
-        #welcome.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
+        #welcome.hidden { opacity: 0; visibility: hidden; }
 
-        .welcome-crescent {
-            font-size: 3rem;
-            color: var(--gold-bright);
-            margin-bottom: 1rem;
-            animation: pulseGold 2s ease-in-out infinite;
-        }
-        @keyframes pulseGold {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.05); }
-        }
-
-        .welcome-arabic {
-            font-family: 'Amiri', serif;
-            font-size: 2.5rem;
-            color: var(--gold-light);
-            margin-bottom: 0.25rem;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-
-        .welcome-wedding-of {
-            font-family: 'Lato', sans-serif;
-            font-size: 0.7rem;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            color: var(--gold-pale);
-            margin: 1.5rem 0 0.5rem;
-        }
-
-        .welcome-names {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1.2rem;
-            color: var(--gold-light);
-            line-height: 1.8;
-        }
-
-        .welcome-amp {
-            font-family: 'Amiri', serif;
-            font-size: 3rem;
-            color: var(--gold-bright);
-            line-height: 1;
-        }
-
-        .welcome-guest-label {
-            font-size: 0.75rem;
-            color: var(--gold-pale);
-            margin: 1rem 0 0.25rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .welcome-guest-name {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 1rem;
-            color: var(--gold-light);
-            margin-bottom: 2rem;
-        }
-
-        .welcome-separator {
-            width: 80px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
-            margin: 1rem auto;
-        }
+        .welcome-crescent { font-size: 3rem; color: var(--gold-bright); margin-bottom: 1rem; animation: pulseGold 2s ease-in-out infinite; position: relative; z-index: 1; }
+        @keyframes pulseGold { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.05); } }
+        .welcome-arabic { font-family: 'Amiri', serif; font-size: 2.5rem; color: var(--gold-light); margin-bottom: 0.25rem; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .welcome-wedding-of { font-family: 'Lato', sans-serif; font-size: 0.7rem; letter-spacing: 5px; text-transform: uppercase; color: var(--gold-pale); margin: 1.5rem 0 0.5rem; position: relative; z-index: 1; }
+        .welcome-names { font-family: 'Cinzel Decorative', serif; font-size: 1.2rem; color: var(--gold-light); line-height: 1.8; position: relative; z-index: 1; }
+        .welcome-amp { font-family: 'Amiri', serif; font-size: 3rem; color: var(--gold-bright); line-height: 1; position: relative; z-index: 1; }
+        .welcome-guest-label { font-size: 0.75rem; color: var(--gold-pale); margin: 1rem 0 0.25rem; letter-spacing: 2px; text-transform: uppercase; position: relative; z-index: 1; }
+        .welcome-guest-name { font-family: 'Cinzel Decorative', serif; font-size: 1rem; color: var(--gold-light); margin-bottom: 2rem; position: relative; z-index: 1; }
+        .welcome-separator { width: 80px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-bright), transparent); margin: 1rem auto; position: relative; z-index: 1; }
 
         /* ===== NAVBAR ===== */
-        #navbar-menu {
-            background: var(--emerald-deep);
-            border-top: 1px solid rgba(201,168,76,0.3) !important;
-        }
-        #navbar-menu .nav-link {
-            color: var(--gold-pale) !important;
-            text-align: center;
-            padding: 0.5rem 0.3rem;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.6rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.2s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 3px;
-            height: 100%;
-        }
-        #navbar-menu .nav-link:hover,
-        #navbar-menu .nav-link.active {
-            color: var(--gold-bright) !important;
-        }
-        #navbar-menu .nav-link i {
-            font-size: 1.1rem;
-            line-height: 1;
-        }
-        #navbar-menu .nav-link span {
-            line-height: 1;
-            display: block;
-        }
-        #navbar-menu .nav-item {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+        #navbar-menu { background: var(--emerald-deep); border-top: 1px solid rgba(201,168,76,0.3) !important; }
+        #navbar-menu .nav-link { color: var(--gold-pale) !important; text-align: center; padding: 0.5rem 0.3rem; font-family: 'Lato', sans-serif; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.2s; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; height: 100%; }
+        #navbar-menu .nav-link:hover, #navbar-menu .nav-link.active { color: var(--gold-bright) !important; }
+        #navbar-menu .nav-link i { font-size: 1.1rem; line-height: 1; }
+        #navbar-menu .nav-link span { line-height: 1; display: block; }
+        #navbar-menu .nav-item { display: flex; align-items: center; justify-content: center; }
 
         /* ===== FLOATING BUTTONS ===== */
-        .floating-btns {
-            position: fixed;
-            bottom: 10vh;
-            right: 1rem;
-            z-index: 1030;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-        }
-        .floating-btn {
-            width: 40px; height: 40px;
-            background: var(--emerald-deep);
-            border: 1px solid rgba(201,168,76,0.5);
-            color: var(--gold-light);
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        .floating-btn:hover {
-            background: var(--gold-bright);
-            color: var(--emerald-deep);
-        }
+        .floating-btns { position: fixed; bottom: 10vh; right: 1rem; z-index: 1030; display: flex; flex-direction: column; gap: 0.5rem; }
+        .floating-btn { width: 40px; height: 40px; background: var(--emerald-deep); border: 1px solid rgba(201,168,76,0.5); color: var(--gold-light); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 0.9rem; transition: all 0.2s; box-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+        .floating-btn:hover { background: var(--gold-bright); color: var(--emerald-deep); }
 
         /* ===== WAVE SEPARATOR ===== */
-        .wave-sep {
-            line-height: 0;
-        }
+        .wave-sep { line-height: 0; }
         .wave-sep svg { display: block; }
 
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         .fade-in-up { animation: fadeInUp 0.8s ease forwards; }
 
         /* ===== LOVE STORY ===== */
-        #love-story {
-            background: var(--white);
-            padding: 3rem 1.5rem;
-        }
-        .story-timeline {
-            position: relative;
-            padding-left: 2.5rem;
-            margin-top: 1.5rem;
-        }
-        .story-timeline::before {
-            content: '';
-            position: absolute;
-            left: 0.75rem;
-            top: 0; bottom: 0;
-            width: 2px;
-            background: linear-gradient(180deg, var(--gold-bright), var(--emerald-light), var(--gold-bright));
-        }
-        .story-item {
-            position: relative;
-            margin-bottom: 2rem;
-        }
-        .story-item::before {
-            content: '';
-            position: absolute;
-            left: -2rem;
-            top: 0.3rem;
-            width: 12px; height: 12px;
-            background: var(--gold-bright);
-            transform: rotate(45deg);
-        }
-        .story-title {
-            font-family: 'Cinzel Decorative', serif;
-            font-size: 0.9rem;
-            color: var(--emerald-deep);
-            margin-bottom: 0.5rem;
-        }
-        .story-text {
-            font-size: 0.875rem;
-            color: var(--text-mid);
-            line-height: 1.8;
-        }
+        #love-story { background: var(--white); padding: 3rem 1.5rem; }
+        .story-timeline { position: relative; padding-left: 2.5rem; margin-top: 1.5rem; }
+        .story-timeline::before { content: ''; position: absolute; left: 0.75rem; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--gold-bright), var(--emerald-light), var(--gold-bright)); }
+        .story-item { position: relative; margin-bottom: 2rem; }
+        .story-item::before { content: ''; position: absolute; left: -2rem; top: 0.3rem; width: 12px; height: 12px; background: var(--gold-bright); transform: rotate(45deg); }
+        .story-title { font-family: 'Cinzel Decorative', serif; font-size: 0.9rem; color: var(--emerald-deep); margin-bottom: 0.5rem; }
+        .story-text { font-size: 0.875rem; color: var(--text-mid); line-height: 1.8; }
 
         /* ===== SCROLLBAR ===== */
         ::-webkit-scrollbar { width: 4px; }
         ::-webkit-scrollbar-track { background: var(--emerald-deep); }
         ::-webkit-scrollbar-thumb { background: var(--gold-bright); }
+
+        /* ===== GLITTER CANVAS ===== */
+        .glitter-canvas {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9998;
+        }
+
+        /* ===== HANGING STARS ===== */
+        .hanging-stars {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .hanging-star {
+            position: absolute;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: swingHang ease-in-out infinite;
+            transform-origin: top center;
+        }
+        .hanging-star .star-shape {
+            color: var(--gold-bright);
+            filter: drop-shadow(0 0 5px rgba(201,168,76,0.9));
+            animation: twinkleStar ease-in-out infinite;
+        }
+        @keyframes swingHang {
+            0%, 100% { transform: rotate(-5deg); }
+            50%       { transform: rotate(5deg); }
+        }
+        @keyframes twinkleStar {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.3; transform: scale(0.7); }
+        }
+
+        /* ===== WELCOME FLOATING STARS ===== */
+        .welcome-stars {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .welcome-star {
+            position: absolute;
+            color: var(--gold-bright);
+            animation: floatStar linear infinite;
+            opacity: 0;
+        }
+        @keyframes floatStar {
+            0%   { opacity: 0; transform: translateY(0) rotate(0deg) scale(0.5); }
+            10%  { opacity: 1; }
+            90%  { opacity: 0.5; }
+            100% { opacity: 0; transform: translateY(-110px) rotate(360deg) scale(1.3); }
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 575px) {
@@ -1006,8 +406,16 @@
 
 <body data-audio="./assets/music/pure-love-304010.mp3" data-confetti="true" data-time="2026-01-18 00:00">
 
+    <!-- GLITTER CANVAS (fixed overlay, pointer-events:none) -->
+    <canvas class="glitter-canvas" id="glitter-canvas"></canvas>
+
     <!-- WELCOME OVERLAY -->
     <div id="welcome">
+        <!-- Floating stars background -->
+        <div class="welcome-stars" id="welcome-stars"></div>
+        <!-- Hanging stars in welcome -->
+        <div class="hanging-stars" id="welcome-hanging-stars"></div>
+
         <div class="welcome-crescent">☪</div>
         <div class="welcome-separator"></div>
         <div class="welcome-wedding-of">The Wedding Of</div>
@@ -1017,7 +425,7 @@
         <div class="welcome-separator"></div>
         <div class="welcome-guest-label">Kepada Yth.</div>
         <div class="welcome-guest-name" id="guest-name">Bapak/Ibu/Saudara/i</div>
-        <button onclick="document.getElementById('welcome').classList.add('hidden')" class="btn-islamic">
+        <button onclick="document.getElementById('welcome').classList.add('hidden')" class="btn-islamic" style="position:relative;z-index:1;">
             <i class="fa-solid fa-envelope-open me-2"></i>Buka Undangan
         </button>
     </div>
@@ -1027,6 +435,8 @@
 
         <!-- ===== DESKTOP SIDEBAR ===== -->
         <div class="sticky-top vh-100 d-none d-sm-flex col-sm-5 col-md-6 col-lg-7 sidebar-islamic">
+            <!-- Hanging stars inside sidebar -->
+            <div class="hanging-stars" id="hanging-stars"></div>
             <div class="sidebar-content">
                 <div class="sidebar-arabic">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
                 <div class="gold-divider"><span class="ornament">☪</span></div>
@@ -1043,7 +453,9 @@
         </div>
 
         <!-- ===== MAIN CONTENT ===== -->
-        <div class="col-sm-7 col-md-6 col-lg-5 m-0 p-0">
+        <div class="col-sm-7 col-md-6 col-lg-5 m-0 p-0" style="position:relative;">
+            <!-- Hanging stars in main content -->
+            <div id="main-hanging-stars" style="position:absolute; top:0; left:0; right:0; height:0; pointer-events:none; z-index:1020; overflow:visible;"></div>
             <main data-bs-spy="scroll" data-bs-target="#navbar-menu" data-bs-root-margin="25% 0% 0% 0%" tabindex="0">
 
                 <!-- HOME -->
@@ -1510,7 +922,6 @@
     audio.loop = true;
     let playing = false;
 
-    // Autoplay on first user interaction (open invitation button)
     function startMusic() {
         if (!playing) {
             audio.play().then(() => {
@@ -1522,7 +933,6 @@
     }
     document.addEventListener('click', startMusic);
 
-    // Manual toggle button
     musicBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         if (playing) {
@@ -1536,19 +946,16 @@
         }
     });
 
-
     // ===== URL PARAM GUEST NAME =====
     (function() {
         const el = document.getElementById('guest-name');
         if (!el) return;
         let guestName = '';
 
-        // 1) Try query string ?to=... or ?name=...
         const params = new URLSearchParams(window.location.search);
         guestName = params.get('to') || params.get('name') || '';
         if (guestName) guestName = decodeURIComponent(guestName.replace(/\+/g, ' '));
 
-        // 2) Try path segment — everything after the last slash if it's not a filename
         if (!guestName) {
             const path = decodeURIComponent(window.location.pathname);
             const parts = path.split('/').filter(Boolean);
@@ -1559,6 +966,194 @@
         }
 
         if (guestName) el.textContent = guestName;
+    })();
+
+    // ===== GLITTER CANVAS =====
+    (function() {
+        const canvas = document.getElementById('glitter-canvas');
+        const ctx = canvas.getContext('2d');
+        let W, H, particles = [];
+
+        function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+        resize();
+        window.addEventListener('resize', resize);
+
+        const COLORS = ['#c9a84c','#e8c97a','#f5e8b8','#ffffff','#ffd700','#ffe566'];
+
+        function Particle(x, y) {
+            this.x = x !== undefined ? x : Math.random() * W;
+            this.y = y !== undefined ? y : -5;
+            this.size = Math.random() * 2.5 + 0.5;
+            this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+            this.vx = (Math.random() - 0.5) * 0.5;
+            this.vy = Math.random() * 0.7 + 0.2;
+            this.life = Math.random() * 200 + 100;
+            this.age = 0;
+            this.shape = Math.random() > 0.5 ? 'circle' : 'diamond';
+        }
+
+        Particle.prototype.update = function() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.age++;
+            this.alpha = Math.sin((this.age / this.life) * Math.PI) * 0.85;
+            return this.age < this.life && this.y < H + 10;
+        };
+
+        Particle.prototype.draw = function() {
+            ctx.save();
+            ctx.globalAlpha = this.alpha;
+            ctx.fillStyle = this.color;
+            ctx.shadowColor = this.color;
+            ctx.shadowBlur = 5;
+            if (this.shape === 'diamond') {
+                ctx.translate(this.x, this.y);
+                ctx.rotate(Math.PI / 4);
+                ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+            } else {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            ctx.restore();
+        };
+
+        // Continuous rain of glitter
+        setInterval(() => {
+            if (particles.length < 90) particles.push(new Particle());
+        }, 110);
+
+        function animate() {
+            ctx.clearRect(0, 0, W, H);
+            particles = particles.filter(p => { const alive = p.update(); if (alive) p.draw(); return alive; });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // Burst on click
+        document.addEventListener('click', function(e) {
+            for (let i = 0; i < 16; i++) {
+                const p = new Particle(e.clientX, e.clientY);
+                p.vy = (Math.random() - 0.5) * 5;
+                p.vx = (Math.random() - 0.5) * 5;
+                particles.push(p);
+            }
+        });
+    })();
+
+    // ===== HANGING STARS (welcome overlay) =====
+    (function() {
+        const container = document.getElementById('welcome-hanging-stars');
+        if (!container) return;
+        const configs = [
+            { left: '5%',   lineH: '70px',  size: '0.9rem', swing: '3.5s', twinkle: '2.2s', delay: '0s' },
+            { left: '18%',  lineH: '110px', size: '0.75rem',swing: '4.8s', twinkle: '3s',   delay: '0.5s' },
+            { left: '32%',  lineH: '55px',  size: '1.1rem', swing: '3.2s', twinkle: '2.5s', delay: '1s' },
+            { left: '48%',  lineH: '90px',  size: '0.8rem', swing: '5s',   twinkle: '1.9s', delay: '0.3s' },
+            { left: '63%',  lineH: '65px',  size: '1rem',   swing: '4.2s', twinkle: '2.8s', delay: '0.8s' },
+            { left: '78%',  lineH: '120px', size: '0.85rem',swing: '3.7s', twinkle: '2.3s', delay: '1.3s' },
+            { left: '91%',  lineH: '50px',  size: '0.95rem',swing: '4.5s', twinkle: '3.2s', delay: '0.6s' },
+        ];
+        configs.forEach(cfg => {
+            const star = document.createElement('div');
+            star.className = 'hanging-star';
+            star.style.cssText = `left:${cfg.left}; animation-duration:${cfg.swing}; animation-delay:${cfg.delay};`;
+            star.innerHTML = `
+                <div style="width:1px;height:${cfg.lineH};background:linear-gradient(180deg,rgba(201,168,76,0.8),rgba(201,168,76,0.05));"></div>
+                <span class="star-shape" style="font-size:${cfg.size};animation-duration:${cfg.twinkle};animation-delay:${cfg.delay};">✦</span>
+            `;
+            container.appendChild(star);
+        });
+    })();
+
+    // ===== HANGING STARS (main content) =====
+    (function() {
+        const container = document.getElementById('main-hanging-stars');
+        if (!container) return;
+        const col = container.closest('.col-sm-7, .col-sm-5, [class*="col-"]');
+
+        const configs = [
+            { left: '8%',   lineH: '60px',  size: '0.8rem', swing: '4s',   twinkle: '2.5s', delay: '0.2s' },
+            { left: '25%',  lineH: '100px', size: '0.7rem', swing: '5.5s', twinkle: '3.1s', delay: '0.9s' },
+            { left: '45%',  lineH: '50px',  size: '0.9rem', swing: '3.6s', twinkle: '2s',   delay: '0.4s' },
+            { left: '65%',  lineH: '80px',  size: '0.75rem',swing: '4.8s', twinkle: '2.7s', delay: '1.2s' },
+            { left: '82%',  lineH: '65px',  size: '0.85rem',swing: '3.9s', twinkle: '3.4s', delay: '0s' },
+            { left: '95%',  lineH: '90px',  size: '0.7rem', swing: '5.2s', twinkle: '2.2s', delay: '0.7s' },
+        ];
+
+        configs.forEach(cfg => {
+            const star = document.createElement('div');
+            star.className = 'hanging-star';
+            star.style.cssText = `left:${cfg.left}; animation-duration:${cfg.swing}; animation-delay:${cfg.delay};`;
+            star.innerHTML = `
+                <div style="width:1px;height:${cfg.lineH};background:linear-gradient(180deg,rgba(201,168,76,0.6),rgba(201,168,76,0.03));"></div>
+                <span class="star-shape" style="font-size:${cfg.size};animation-duration:${cfg.twinkle};animation-delay:${cfg.delay};">✦</span>
+            `;
+            container.appendChild(star);
+        });
+
+        // Sync container to match the actual column position & size on screen
+        function syncPosition() {
+            const parent = container.parentElement;
+            if (!parent) return;
+            const rect = parent.getBoundingClientRect();
+            container.style.position = 'fixed';
+            container.style.top = '0';
+            container.style.left = rect.left + 'px';
+            container.style.width = rect.width + 'px';
+            container.style.height = '0';
+            container.style.overflow = 'visible';
+            container.style.pointerEvents = 'none';
+            container.style.zIndex = '1020';
+        }
+        syncPosition();
+        window.addEventListener('resize', syncPosition);
+    })();
+    (function() {
+        const container = document.getElementById('hanging-stars');
+        if (!container) return;
+
+        const configs = [
+            { left: '8%',   lineH: '85px',  size: '1rem',   swing: '3.2s', twinkle: '2s',   delay: '0s' },
+            { left: '22%',  lineH: '130px', size: '0.8rem', swing: '4.5s', twinkle: '3s',   delay: '0.7s' },
+            { left: '38%',  lineH: '60px',  size: '1.3rem', swing: '3.8s', twinkle: '2.4s', delay: '1.1s' },
+            { left: '54%',  lineH: '110px', size: '0.75rem',swing: '5.2s', twinkle: '1.8s', delay: '0.4s' },
+            { left: '70%',  lineH: '75px',  size: '1.1rem', swing: '4s',   twinkle: '2.7s', delay: '0.9s' },
+            { left: '85%',  lineH: '50px',  size: '0.9rem', swing: '3.5s', twinkle: '3.3s', delay: '1.5s' },
+            { left: '94%',  lineH: '95px',  size: '0.85rem',swing: '4.8s', twinkle: '2.1s', delay: '0.2s' },
+        ];
+
+        configs.forEach(cfg => {
+            const star = document.createElement('div');
+            star.className = 'hanging-star';
+            star.style.cssText = `left:${cfg.left}; animation-duration:${cfg.swing}; animation-delay:${cfg.delay};`;
+            star.innerHTML = `
+                <div style="width:1px;height:${cfg.lineH};background:linear-gradient(180deg,rgba(201,168,76,0.8),rgba(201,168,76,0.05));"></div>
+                <span class="star-shape" style="font-size:${cfg.size};animation-duration:${cfg.twinkle};animation-delay:${cfg.delay};">✦</span>
+            `;
+            container.appendChild(star);
+        });
+    })();
+
+    // ===== FLOATING STARS (welcome overlay) =====
+    (function() {
+        const container = document.getElementById('welcome-stars');
+        if (!container) return;
+        const symbols = ['✦', '✧', '★', '◆', '☪', '✵', '✶'];
+        for (let i = 0; i < 22; i++) {
+            const star = document.createElement('div');
+            star.className = 'welcome-star';
+            star.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+            star.style.cssText = `
+                left:${Math.random() * 100}%;
+                bottom:${Math.random() * 65}%;
+                font-size:${Math.random() * 1 + 0.4}rem;
+                animation-duration:${Math.random() * 4 + 3}s;
+                animation-delay:${Math.random() * 7}s;
+                opacity:0;
+            `;
+            container.appendChild(star);
+        }
     })();
     </script>
 </body>
