@@ -192,7 +192,7 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 75%;
+            object-position: center 10%;
         }
 
         /* Floral wreath — tight around photo, just 40px beyond edge */
@@ -1323,14 +1323,7 @@ tapi selalu penuh kesabaran, pengertian, dan cinta yang tumbuh setiap hari.
                             <button class="btn-islamic w-100" id="btn-send" onclick="sendComment()"><i class="fa-solid fa-paper-plane me-2"></i>Kirim Ucapan</button>
                         </div>
                         <div id="comments">
-                            <div class="comment-item">
-                                <div><span class="comment-author">Bapak Ahmad</span><span class="comment-presence">✅ Hadir</span></div>
-                                <p class="comment-text">Barakallahu lakuma wa baraka 'alaikuma wa jama'a bainakuma fii khair. Semoga menjadi keluarga yang sakinah, mawaddah, warahmah. Aamiin.</p>
-                            </div>
-                            <div class="comment-item">
-                                <div><span class="comment-author">Siti Rahmah</span><span class="comment-presence">✅ Hadir</span></div>
-                                <p class="comment-text">Selamat menempuh hidup baru! Semoga rumah tangga kalian dipenuhi keberkahan dan kebahagiaan. Aamiin ya Rabb 💕</p>
-                            </div>
+                            <!-- // Ucapan yang sudah dikirim akan muncul di sini secara real-time // -->
                         </div>
                     </div>
                 </section>
@@ -1579,5 +1572,7 @@ tapi selalu penuh kesabaran, pengertian, dan cinta yang tumbuh setiap hari.
         }, 200);
     })();
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+    <script src="js/comment.js"></script>
 </body>
 </html>
